@@ -1,0 +1,307 @@
+.container-wrapper {
+    display: flex;
+    padding-top: 1%;
+
+}
+
+.left-container,
+.right-container, .second-right-container, .second-left-container {
+    /* flex-grow: 1; */
+    padding: 24px;
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.left-container {
+    width: 90% !important;
+    height: 410px;
+    margin-left:8%;
+}
+
+.second-left-container {
+    width: 90% !important;
+    height: 300px;
+    margin-left:8%;
+}
+
+.right-container {
+    width: 90% !important; 
+    height: 180px;
+}
+
+.second-right-container{
+    width: 90% !important; 
+    height: 300px; 
+}
+
+.gap {
+    width: 24px; 
+}
+
+.side-gap {
+    width: 5%;
+}
+.heading{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left:6%;
+    padding-top: 20px;
+}
+
+
+.toggle-label {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    font-style: Arial;
+    font-weight: bold;
+}
+
+
+.chip {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 6px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size:14px;
+    font-style: Arial;
+}
+
+.chip-close {
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+#fileInput {
+    display: none; 
+}
+
+.add-new {
+    cursor: pointer;
+    color: #000;
+}
+
+
+.edit-delete-icons {
+    display: none;
+    font-size: 16px;
+}
+
+.action-cell:hover .edit-delete-icons {
+    display: inline-block;
+}
+
+#educationalTable tbody tr:hover {
+    background-color: #f5f5ff; 
+}
+
+.action-icons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-icons span {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-images {
+    display: flex;
+    gap: 12px;
+}
+
+.action-images img {
+    width: 20px; 
+    height: 20px;
+}
+
+#educationalTable {
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 250px; 
+    overflow-y: auto; 
+}
+
+#educationalTable th,
+#educationalTable td {
+    height: 40px;
+    font-size: 14px;
+    font-family: Arial, sans-serif; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+form input {
+    border: none !important;
+    outline: none !important;
+    background-color: #f5f5ff !important;
+    
+   
+}
+
+
+.form-check-input:checked {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+
+.profile_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    width: 50%; 
+}
+
+
+.profile_container img {
+    margin-left: 24px;
+   
+}
+
+.image_space{
+    margin-left:24px;
+}
+
+::ng-deep.card{
+    flex-direction: row !important;
+}
+
+.dropdown-customisation{
+    border: none !important;
+     outline: none !important; 
+     background-color: #f5f5ff !important;
+}
+
+.spacing-primaryskill{
+    padding-top:40px;
+}
+
+.container-table{
+    padding-top:18px;
+}
+
+.table_heading{
+    font-size:18px;
+    font-style:Arial;
+    font-weight:bold;
+}
+
+.table_top{
+    padding-top:24px;
+}
+
+.card_style{
+    height:56px;
+    flex-direction: row;
+    margin:10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border:none;
+}
+
+#card_alignment{
+    height:56px;
+    flex-direction: row;
+    margin:10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border:none;
+}
+
+.Initial_circle{
+    width: 40px; 
+    height: 40px; 
+    background-color:#b48dff; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: purple; 
+    font-size: 18px;
+}
+
+.support_member{
+    font-size:18px;
+    padding-right:0px;
+    text-align:left
+}
+
+#mail_image{
+    padding-left:0px;
+    padding-right:16px;
+    align-items:left
+}
+
+#call_image{
+    align-items:left;
+    padding-left:0px
+}
+
+#view_more{
+    margin-top: 70px; 
+    text-align: center;
+}
+
+.text_view_more{
+    color: purple;
+text-align: left;}
+
+
+.text_view_more:hover {
+    cursor: pointer;
+}
+
+#separator{
+    width:60%;
+    margin-left:5%; 
+    margin-top:24px;
+}
+
+.button_changes{
+    margin-top: 24px;
+    padding-bottom:5%
+}
+
+.button_div{
+    text-align: right;
+}
+
+.submit-button{
+    width: 110px; 
+    padding-left: 32px;
+    padding-right:32px;
+}
+
+.cancel_div{
+    text-align: left;
+}
+
+#cancel_button{
+    width: 110px; 
+    padding-left: 32px;
+    padding-right:32px;
+    border:black 1px solid; 
+    color: black;
+}
+
+.alignment{
+    text-align: left
+}
+
+.delete_iage{
+    padding-right: 24px !important;
+}
+
+.edit_image{
+    padding-right: 16px !important;
+}
+
+.container_alignment{
+    padding-top: 20px !important;
+}

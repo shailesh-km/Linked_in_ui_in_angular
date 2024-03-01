@@ -1,0 +1,190 @@
+<div class="row heading">Create job request</div>
+
+<div class="row container_alignment">
+  <div class="col-8">
+    <form [formGroup]="myForm">
+
+    <div class="row">
+      <div class="left-container">
+          <div class="row mb-3">
+            <div class="col">
+              <label for="jobTitle" class="form-label">Job Title</label>
+              <input type="text" class="form-control" id="jobTitle" name="jobTitle" required formControlName="jobTitle">
+            </div>
+
+            <div class="col">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required formControlName="email">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="requestDate" class="form-label">Request Date</label>
+              <input type="date" class="form-control" id="requestDate" name="requestDate" required formControlName="requestDate">
+            </div>
+
+            <div class="col">
+              <label for="time" class="form-label">Time</label>
+              <input type="time" class="form-control" id="time" name="time" required formControlName="time">
+            </div>
+
+            <div class="col">
+              <label for="location" class="form-label">Location</label>
+              <input type="text" class="form-control" id="location" name="location" required formControlName="location">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="quarter" class="form-label">Quarter</label>
+              <select class="form-select dropdown-customisation" id="quarter" name="quarter" required formControlName="quarter">
+                <option value="" selected disabled>Select Quarter</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <label for="state" class="form-label">State</label>
+              <input type="text" class="form-control" id="state" name="state" required formControlName="state">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col spacing-primaryskill">
+              <label class="form-label">Primary Skills</label>
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="primarySkills" id="angular" value="Angular" formControlName="primarySkills">
+                  <label class="form-check-label" for="angular">Angular</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="primarySkills" id="react" value="React" formControlName="primarySkills">
+                  <label class="form-check-label" for="react">React</label>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row container-table">
+      <div class="second-left-container">
+        <p class="table_heading">Educational Requirement</p>
+        
+        <table id="educationalTable" class="table table-borderless table_top">
+            <thead>
+              <tr>
+                <th>Educational</th>
+                <th>Field of Education</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let eduReq of myForm.get('educationalRequirements')?.value; let i = index">
+                    <tr [formGroup]="eduReq">
+                      <td>
+                        <input type="text" class="form-control" formControlName="educational" [value]="eduReq.educational" [attr.disabled]="true">
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" formControlName="fieldOfEducation" [value]="eduReq.fieldOfEducation" [attr.disabled]="true">
+                      </td>
+                      <td>
+                        <img src="assets/images/icon-edit.png" alt="Icon 1" class="edit_image">
+                        <img src="assets/images/icon-trash.png" alt="Icon 2" class="delete_iage">
+                      </td>
+                    </tr>
+                  </ng-container>
+                  
+            </tbody>
+          </table>
+        <hr>
+        <span style="cursor: pointer;">+ Add New</span>
+      </div>
+    </div>
+</form>
+
+  </div>
+
+  <div class="col-4">
+    <div class="row">
+      <div class="right-container">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="preferredChannelToggle">
+          <label class="toggle-label" for="preferredChannelToggle">Preferred Channel</label>
+        </div>
+
+        <div id="imageSelection">
+          <div class="chip" *ngFor="let file of selectedFiles">
+            {{ file.name }} <span class="chip-close" (click)="removeFile(file)">x</span>
+          </div>
+        </div>
+
+        <div class="add-new" (click)="openFileExplorer()">+ Add New</div>
+        <input type="file" id="fileInput" multiple (change)="handleFileSelection($event)">
+      </div>
+    </div>
+
+    <div class="row container-table">
+      <div class="second-right-container">
+        <p class="table_heading"> Support team</p>
+        <div class="row card card_style" id="card_alignment" >
+            <div class="col-2">
+                <div class="Initial_circle" >
+                    JG
+                </div>
+            </div>
+            <div class="col-8 support_member" >
+                Jane Goodall
+            </div>
+            <div class="col-1" id="mail_image" >
+                <img src="assets/images/icon-mail.png" alt="Icon 1 ">
+            </div>
+            <div class="col-1" id="call_image">
+                <img src="assets/images/icon-call.png" alt="Icon 1">
+
+            </div>
+    </div>
+
+    <div class="row card card_style" id="card_alignment">
+            <div class="col-2">
+                <div class= "Initial_circle" >
+                    JG
+                </div>
+            </div>
+            <div class="col-8 support_member" >
+                Jane Goodall
+            </div>
+            <div class="col-1" id="mail_image">
+                <img src="assets/images/icon-mail.png" alt="Icon 1"  >
+            </div>
+            <div class="col-1" id="call_image">
+                <img src="assets/images/icon-call.png" alt="Icon 1">
+
+            </div>
+    </div>
+
+    <div class="row " id=view_more>
+        <div class="col-3">
+            <p class="text_view_more">View More</p>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr id="separator">
+
+<div class="row button_changes">
+  <div class="col-2 button_div">
+    <button type="submit" class="btn btn-dark submit-button"  [disabled]="myForm.invalid">Submit</button>
+  </div>
+  <div class="col-2 cancel_div">
+    <button type="button" class="btn btn-light" id="cancel_button">Cancel</button>
+  </div>
+  <div class="col-10 alignment"></div>
+</div>
